@@ -1,33 +1,33 @@
 {
     "p001":{
-        "name": "Shubham Chauhan",
-        "city": "Faridabad",
+        "name": "dfg",
+        "city": "pune",
         "age": 29,
         "gender": "Male",
         "height": "6ft",
         "weight": 98.2,
-        "bmi": 34,
+        "bmi": 23,
         "verdict": "obese"
     },
     "p002":{
-        "name": "Shivani Chauhan",
-        "city": "Faridabad",
+        "name": "cvf",
+        "city": "mumbai",
         "age": 31,
         "gender": "FeMale",
         "height": "5ft",
         "weight": 68.2,
-        "bmi": 34,
+        "bmi": 90,
         "verdict": "obese"
     },
     
     "p003":{
-        "name": "Rajni Chauhan",
-        "city": "Faridabad",
-        "age": 50,
+        "name": "ABC",
+        "city": "Banglore",
+        "age": 23,
         "gender": "FeMale",
         "height": "5ft",
         "weight": 68.2,
-        "bmi": 34,
+        "bmi": 38,
         "verdict": "obese"
     }
 }
