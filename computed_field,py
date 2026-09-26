@@ -1,0 +1,145 @@
+from pydantic import BaseModel, EmailStr, AnyUrl, Field, field_validator, model_validator, computed_field
+from typing import List, Dict, Optional, Annotated
+
+# Data validation using pydantic
+
+class Patient(BaseModel):           #pydantic model class
+
+    name : str                     
+    email: EmailStr                                
+    age : int 
+    weight : float
+    height : float
+    marrital_status : bool
+    allergies : List[str]
+    contact_details : Dict[str,str]   
+
+
+# Computed Fields - This are the fields for which user will not provide the value but on the basis of other fields then the value of computed fields will be calculated
+
+# Eg: BMI field (user have to calculate so we will calculate this ourself)
+
+    @computed_field
+    @property
+    def calculate_bmi(self) -> float:
+        bmi = round(self.weight/(self.height**2),2)
+        return bmi
+
+
+
+
+def update_patient_data(patient : Patient):
+
+    print(patient.name)
+    print(patient.email)
+    print(patient.age)
+    print(patient.weight)
+    print(patient.marrital_status)
+    print(patient.allergies)
+    print(patient.contact_details)
+    print('BMI', patient.calculate_bmi)
+
+    print('data updated')
+
+patient_info = {'name': 'shubham','email' : 'abc@hdfc.com', 'age' : '75', 'weight' : 100.8, 'height' : 1.85,  'marrital_status' : True, 'allergies' : ['Pollen','Dust'], 'contact_details' : { 'email' : 'abc@gmail.com', 'Mobile_number' : '9999999999', 'emergency' : '2222222222' } }          # Dictionary 
+
+patient1 = Patient(**patient_info)                              # validation -> Type coercion
+
+
+#insert_patient_data(patient1)
+update_patient_data(patient1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
