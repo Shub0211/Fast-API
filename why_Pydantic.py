@@ -19,8 +19,8 @@ def insert_patient_data(name: str, age:int):
     else :
         raise TypeError('incorrect datatype')
 
-insert_patient_data('joker','twenty')
-insert_patient_data('shubham','30')
+insert_patient_data('joker',20)
+insert_patient_data('shubham',30)
 
 # This makes code lengthy and not acccurated
 # That's why pydaantic helps in type validation and data validation
